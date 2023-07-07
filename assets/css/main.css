@@ -4017,34 +4017,12 @@ input, select, textarea {
 	-ms-flex-shrink: 0;
 	flex-shrink: 0;
 	display: block;
-	height: 10em;
-	line-height: 10em;
-	margin: 0 2em 0 0;
+	height: 5em;
+	line-height: 5em;
+	margin: 0 0 0 0;
 	text-align: center;
-	width: 10em;
+	width: 5em;
   }
-  /* .features article .icon:before {
-	color: green;
-	font-size: 2.75rem;
-	position: relative;
-	top: 0.05em;
-  }
-  .features article .icon:after {
-	-moz-transform: rotate(45deg);
-	-webkit-transform: rotate(45deg);
-	-ms-transform: rotate(45deg);
-	transform: rotate(45deg);
-	border-radius: 0.25rem;
-	border: solid 2px rgba(210, 215, 217, 0.75);
-	content: "";
-	display: block;
-	height: 7em;
-	left: 50%;
-	margin: -3.5em 0 0 -3.5em;
-	position: absolute;
-	top: 50%;
-	width: 7em;
-  } */
   .features article .content {
 	-moz-flex-grow: 1;
 	-webkit-flex-grow: 1;
@@ -4063,10 +4041,12 @@ input, select, textarea {
 	.features {
 	  margin: 0 0 2em 0;
 	  width: 100%;
+	  background-color: rgba(187, 191, 187, 0.5);
 	}
 	.features article {
 	  margin: 0 0 3em 0;
 	  width: 100%;
+	  background-color: rgba(187, 191, 187, 0.5);
 	}
 	.features article:nth-child(2n - 1) {
 	  margin-right: 0;
@@ -4085,14 +4065,6 @@ input, select, textarea {
 	  height: 8em;
 	  line-height: 8em;
 	  width: 8em;
-	}
-	.features article .icon:before {
-	  font-size: 2.25rem;
-	}
-	.features article .icon:after {
-	  height: 6em;
-	  margin: -3em 0 0 -3em;
-	  width: 6em;
 	}
   }
   @media screen and (max-width: 480px) {
@@ -4126,4 +4098,39 @@ input, select, textarea {
 	  font-size: 1.25rem;
 	}
   }
-  
+
+  /* blockquote */
+  	blockquote {
+		border:none;
+		font-family:Georgia, "Times New Roman", Times, serif;
+		margin-bottom:-30px;
+		quotes: "\201C""\201D""\2018""\2019";
+	}
+	
+	blockquote h3 {
+		font-size:21px;
+	}
+	
+	blockquote h3:before { 
+		content: open-quote;
+		font-weight: bold;
+		font-size:100px;
+		color:#889c0b;
+	} 
+
+	blockquote h3:after { 
+		content: close-quote;
+		font-weight: bold;
+		font-size:100px;
+		color:#889c0b;
+	}
+
+	/* marker */
+	mark {
+		background-color: hsl(64, 82%, 65%);
+		color: rgb(0, 0, 0);
+	}
+
+	mark.quote {
+		background-color: rgba(201, 196, 196, 0.65);
+	}

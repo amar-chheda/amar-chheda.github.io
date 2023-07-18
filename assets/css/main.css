@@ -177,7 +177,7 @@ input, select, textarea {
 		transition: border-bottom-color 0.25s ease-in-out;
 		text-decoration: none;
 		color: #000000;
-		border-bottom: dotted 1px;
+		outline: 0;
 	}
 
 		a:hover {
@@ -3252,7 +3252,7 @@ input, select, textarea {
 			#wrapper section > header {
 				grid-area: header;
 				justify-self: end;
-				text-align: right;
+				text-align: center;
 			}
 
 				#wrapper section > header h2 {
@@ -3885,7 +3885,7 @@ input, select, textarea {
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 1000px;
+  max-width: 500px;
   position: relative;
   margin: auto;
 }
@@ -4133,4 +4133,24 @@ input, select, textarea {
 
 	mark.quote {
 		background-color: rgba(201, 196, 196, 0.65);
+	}
+
+
+	/* Floating Button */
+	.floating-button {
+		position: fixed;
+		bottom: 20px;
+		right: 20px;
+		background-color: #49fcd4;
+		color: #ffffff;
+		padding: 15px;
+		border-radius: 10%;
+		box-shadow: 0px 2px 5px rgba(37, 35, 35, 0.875);
+		text-decoration: none;
+		font-weight: bold;
+		z-index: 9999;
+	}
+
+	.floating-button:hover {
+		background-color: #7cd9c5c8;
 	}

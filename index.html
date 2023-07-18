@@ -14,10 +14,9 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 	</head>
 	<body class="is-preload">
-
+		<a href="https://topmate.io/amar_chheda" class="floating-button" target="_blank">Let's Connect!</a>
 		<!-- Wrapper -->
 			<div id="wrapper">
-
 				<!-- Intro -->
 					<section class="intro">
 						<header>
@@ -74,7 +73,7 @@
 
 
 				<!-- Section -->
-				<section>
+				<section id="skills">
 					<header>
 						<h2>Technology & Skills</h2>
 					</header>
@@ -161,32 +160,21 @@
 					</div>
 				</section>
 
-				<!-- Section -->
-					<section id="first">
-						<header>
-							<h2>Blogs</h2>
-							<p>
-								Read through how I've been able to leverage my skills in the field of <strong>Real-time data processing, Generative AI, Deep Learning</strong> to solve complex real-world problems.
-							</p>
-						</header>
-						<div class="content">
-							<p>
-								<div id="retainable-rss-embed"
-									data-rss="https://medium.com/feed/@amar.m.chheda"
-									data-maxcols="2" 
-									data-layout="grid" 
-									data-poststyle="external" 
-									data-readmore="See More" 
-									data-buttonclass="btn btn-primary" 
-									data-offset="-100">
-								</div>
-							</p>
-						</div>
-					</section>
-
+				<!-- <Section> -->
+				<section id="linkedin-reco">
+					<header>
+						<h2>
+							LinkedIn Recomendations
+						</h2>
+					</header>
+					<div class="content">
+						<div class='sk-ww-linkedin-recommendations' data-embed-id='168200'></div>
+						<script src='https://widgets.sociablekit.com/linkedin-recommendations/widget.js' async defer></script>
+					</div>
+				</section>
 
 				<!-- Section -->
-					<section>
+					<section id="certificates">
 						<header>
 							<h2>Certificates</h2>
 							<h3>Continuous learning and professional growth</h3>
@@ -240,7 +228,7 @@
 					</section>
 
 					<!-- Section -->
-					<section>
+					<section id="talks">
 						<header>
 							<h2>
 								Talks & Presentations
@@ -280,6 +268,29 @@
 							</div>
 						</div>
 					</section>
+
+				<!-- Section -->
+				<section id="blogs">
+					<header>
+						<h2>Blogs</h2>
+						<p>
+							Read through how I've been able to leverage my skills in the field of <strong>Real-time data processing, Generative AI, Deep Learning</strong> to solve complex real-world problems.
+						</p>
+					</header>
+					<div class="content">
+						<p>
+							<div id="retainable-rss-embed"
+								data-rss="https://medium.com/feed/@amar.m.chheda"
+								data-maxcols="2" 
+								data-layout="grid" 
+								data-poststyle="external" 
+								data-readmore="See More" 
+								data-buttonclass="btn btn-primary" 
+								data-offset="-100">
+							</div>
+						</p>
+					</div>
+				</section>
 
 				
 				<!-- Section -->
@@ -321,11 +332,11 @@
 										<input type="text" name="subject" id="subject" placeholder="Subject" />
 									</div>
 									<div class="field">
-										<textarea name="message" id="message" placeholder="Message" rows="7"></textarea>
+										<textarea name="message" id="body" placeholder="Message" rows="7"></textarea>
 									</div>
 								</div>
 								<ul class="actions">
-									<li><input type="submit" value="Send Message" class="button primary" /></li>
+									<li><input type="submit" value="Send Message" class="button primary" onclick="sendEmail()" /></li>
 								</ul>
 							</form>
 						</div>
@@ -376,6 +387,20 @@
 					}
 					slides[slideshow.currentSlideIndex-1].style.display = "block";  
 					dots[slideshow.currentSlideIndex-1].className += " active";
+				}
+			</script>
+			<script>
+				function sendEmail() {
+				var fromAddress = document.getElementById("email").value;
+				var subject = document.getElementById("subject").value;
+				var body = document.getElementById("body").value;
+
+				var mailtoLink = "mailto:your-email@example.com" +
+					"?subject=" + encodeURIComponent(subject) +
+					"&body=" + encodeURIComponent(body) +
+					"%0A%0AFrom: " + encodeURIComponent(fromAddress);
+
+				window.location.href = mailtoLink;
 				}
 			</script>
 	</body>

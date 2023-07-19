@@ -14,15 +14,33 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 	</head>
 	<body class="is-preload">
+		<div class="navbar">
+			<div class="hamburger" onclick="toggleMenu()">
+			  <div></div>
+			  <div></div>
+			  <div></div>
+			</div>
+		
+			<ul class="menu">
+			  <li onclick="closeMenu()"><a href="#meetme"><strong>About Me</strong></a></li>
+			  <li onclick="closeMenu()"><a href="#skills"><strong>Skills</strong></a></li>
+			  <li onclick="closeMenu()"><a href="#linkedin-reco"><strong>Recomendations</strong></a></li>
+			  <li onclick="closeMenu()"><a href="#certificates"><strong>Certificates</strong></a></li>
+			  <li onclick="closeMenu()"><a href="#talks"><strong>Conferences</strong></a></li>
+			  <li onclick="closeMenu()"><a href="#blogs"><strong>Blogs</strong></a></li>
+			  
+			</ul>
+		  </div>
 		<a href="https://topmate.io/amar_chheda" class="floating-button" target="_blank">Let's Connect!</a>
 		<!-- Wrapper -->
-			<div id="wrapper">
+			<section id="wrapper">
 				<!-- Intro -->
 					<section class="intro">
 						<header>
 							<h1>Hi, I'm Amar Chheda </h1>
 							<h2><mark>Your next Data Science Engineer!</mark></h2>
 							<blockquote><strong>&#x201C;</strong> Connecting businesses with data and generating ROI through actionable insights! <strong>&#x201D;</strong></blockquote>
+							<br>
 							<br>
 							<ul class="icons">
 								<li><a href="https://linkedin.com/in/amarchheda" class="icon brands fa-linkedin-in" target="_blank"><span class="label">LinkedIn</span></a></li>
@@ -92,7 +110,7 @@
 										Data Engineering
 									</h3>
 									<p>
-										Engineering scallable and robust data solutions
+										Engineering scalable and robust data solutions
 									</p>
 								</div>
 							</article>
@@ -343,7 +361,7 @@
 					</section>
 
 				<!-- Copyright -->
-					<div class="copyright">Copyright &copy; 2023 | Amar Chheda</div>
+					<div class="copyright">Copyright &copy; 2023 | Amar Chheda | Built using <a href="https://html5up.net/" target="_blank">HTML5UP</a></div>
 
 			</div>
 
@@ -401,6 +419,30 @@
 					"%0A%0AFrom: " + encodeURIComponent(fromAddress);
 
 				window.location.href = mailtoLink;
+				}
+			</script>
+			<script>
+				// JavaScript for toggling the menu
+				function toggleMenu() {
+				  var menu = document.querySelector('.navbar .menu');
+				  var hamburger = document.querySelector('.navbar .hamburger');
+			
+				  if (menu.style.display === 'block') {
+					menu.style.display = 'none';
+					hamburger.classList.remove('cross');
+				  } else {
+					menu.style.display = 'block';
+					hamburger.classList.add('cross');
+				  }
+				}
+
+				// Function to close the menu
+				function closeMenu() {
+				var menu = document.querySelector('.navbar .menu');
+				var hamburger = document.querySelector('.navbar .hamburger');
+				
+				menu.style.display = 'none';
+				hamburger.classList.remove('cross');
 				}
 			</script>
 	</body>

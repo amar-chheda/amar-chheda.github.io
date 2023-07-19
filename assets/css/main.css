@@ -3243,6 +3243,7 @@ input, select, textarea {
 			grid-template-areas: "header content" "footer content";
 			grid-template-columns: 50vw 50vw;
 			grid-template-rows: 1fr;
+			scroll-margin-top: 5rem;
 		}
 
 			#wrapper section:first-child {
@@ -3256,7 +3257,7 @@ input, select, textarea {
 			}
 
 				#wrapper section > header h2 {
-					margin: 0 0 5rem 0;
+					margin: 0 0 2rem 0;
 				}
 
 				#wrapper section > header h1 + p {
@@ -4141,16 +4142,76 @@ input, select, textarea {
 		position: fixed;
 		bottom: 20px;
 		right: 20px;
-		background-color: #49fcd4;
-		color: #ffffff;
+		background-color: #49fcd586;
+		color: #0000007c;
 		padding: 15px;
-		border-radius: 10%;
-		box-shadow: 0px 2px 5px rgba(37, 35, 35, 0.875);
+		border-radius: 5%;
+		box-shadow: 0px 2px 5px rgba(125, 122, 122, 0.692);
 		text-decoration: none;
 		font-weight: bold;
 		z-index: 9999;
 	}
 
 	.floating-button:hover {
-		background-color: #7cd9c5c8;
+		background-color: #49fcd4;
+		color: #000000;
 	}
+
+
+
+
+	/* Navigation Menu */
+	
+	/* CSS for the navbar */
+    .navbar {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		background-color: #49fcd4;
+		z-index: 999;
+	  }
+	  
+	  .navbar .hamburger {
+		display: block;
+		cursor: pointer;
+		padding: 1rem;
+	  }
+	  
+	  .navbar .hamburger div {
+		width: 25px;
+		height: 3px;
+		background-color: black;
+		margin-bottom: 5px;
+		transition: all 0.3s ease;
+	  }
+	  
+	  /* CSS for the cross */
+	  .navbar .hamburger.cross div:nth-child(1) {
+		transform: rotate(-45deg) translate(-5.5px, 5.5px);
+	  }
+	  
+	  .navbar .hamburger.cross div:nth-child(2) {
+		opacity: 0;
+	  }
+	  
+	  .navbar .hamburger.cross div:nth-child(3) {
+		transform: rotate(45deg) translate(-5.5px, -5.5px);
+	  }
+	  
+	  .navbar .menu {
+		display: none;
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	  }
+	  
+	  .navbar .menu li {
+		padding: 1rem 0 1rem 2rem;
+		background-color: #49fcd4;
+		transition: background-color 0.3s ease;
+	  }
+	  
+	  .navbar .menu li:hover {
+		background-color: hsl(64, 82%, 65%);
+	  }
